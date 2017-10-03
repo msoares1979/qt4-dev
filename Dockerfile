@@ -7,6 +7,7 @@ RUN apt-get install -y gcovr lcov
 RUN apt-get install -y doxygen graphviz mscgen
 RUN apt-get install -y xinetd vnc4server xvfb blackbox x11-apps x11-utils
 RUN apt-get install -y dbus-x11
+RUN apt-get install -y clang-3.6 clang-format-3.6 git
 RUN mkdir -p /var/run/dbus
 
 ENV DISPLAY :10

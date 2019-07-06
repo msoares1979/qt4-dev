@@ -11,6 +11,11 @@ RUN apt-get install -y clang clang-format clang-tidy
 RUN apt-get install -y git ccache sshpass
 RUN apt-get install -y python-minimal python-tornado python-gevent python-yaml python-pexpect
 
+RUN apt-get install -y llvm-dev libclang-dev
+RUN git clone -b v1.5 https://github.com/KDE/clazy.git /var/tmp/clazy
+RUN cd /var/tmp/clazy; cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
+RUN make -C /var/tmp/clazy all install
+
 RUN mkdir -p /var/run/dbus
 RUN echo "QMAKE_CXX = ccache g++" >> /usr/share/qt4/mkspecs/linux-g++-64/qmake.conf
 

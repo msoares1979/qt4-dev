@@ -7,7 +7,8 @@ RUN apt-get install -y cmake
 RUN apt-get install -y gcovr lcov
 RUN apt-get install -y doxygen graphviz mscgen
 RUN apt-get install -y xinetd vnc4server xvfb blackbox x11-apps x11-utils dbus-x11
-RUN apt-get install -y clang clang-format git ccache sshpass
+RUN apt-get install -y clang clang-format clang-tidy
+RUN apt-get install -y git ccache sshpass
 RUN apt-get install -y python-minimal python-tornado python-gevent python-yaml python-pexpect
 
 RUN mkdir -p /var/run/dbus

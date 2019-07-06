@@ -1,1 +1,3 @@
 Minimal requirements to build a Qt 4.8.6 application with lcov support
+
+docker build -t qt4-dev

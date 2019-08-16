@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 RUN apt-get update -y
 RUN apt-get install -y build-essential git
 RUN apt-get install -y qt4-qmake libqt4-dev libqt4-sql-sqlite
-RUN apt-get install -y cmake
+RUN apt-get install -y cmake ninja-build
 RUN apt-get install -y gcovr lcov
 RUN apt-get install -y doxygen graphviz mscgen
 RUN apt-get install -y xinetd vnc4server xvfb blackbox x11-apps x11-utils dbus-x11

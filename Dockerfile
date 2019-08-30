@@ -16,6 +16,9 @@ RUN git clone -b v1.5 https://github.com/KDE/clazy.git /var/tmp/clazy
 RUN cd /var/tmp/clazy; cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
 RUN make -C /var/tmp/clazy all install
 
+RUN apt-get install -y curl
+RUN apt-get install -y python3.6 python3-websockets
+
 RUN mkdir -p /var/run/dbus
 RUN echo "QMAKE_CXX = ccache g++" >> /usr/share/qt4/mkspecs/linux-g++-64/qmake.conf
 
